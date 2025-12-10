@@ -27,3 +27,7 @@ public class CoursController {
     public Cours publierCours(@RequestBody Cours cours, @PathVariable Long createurId) {
         return coursService.publierCours(cours, createurId);
     }
+     @PutMapping("/modifier/{id}")
+    public Cours mettreAJourCours(@PathVariable Long id, @RequestBody Cours cours) {
+        return coursService.mettreAJourCours(id, cours);
+    }
