@@ -35,3 +35,9 @@ public class CoursController {
     public SupportPedagogique ajouterSupport(@PathVariable Long coursId, @RequestBody SupportPedagogique support) {
         return coursService.ajouterSupport(coursId, support);
     }
+      // afficher tous les cours
+    @GetMapping("/")
+    public List<Cours> getAllCours() {
+        return coursService.getAllCours();
+    }
+}
