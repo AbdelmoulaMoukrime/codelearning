@@ -17,3 +17,13 @@ import com.example.plateforme_cours.service.CoursService;
 
 @RestController
 @RequestMapping("/cours")
+public class CoursController {
+
+    @Autowired
+    private CoursService coursService;
+
+    // 1) publierCours
+    @PostMapping("/publier/{createurId}")
+    public Cours publierCours(@RequestBody Cours cours, @PathVariable Long createurId) {
+        return coursService.publierCours(cours, createurId);
+    }
