@@ -31,3 +31,7 @@ public class CoursController {
     public Cours mettreAJourCours(@PathVariable Long id, @RequestBody Cours cours) {
         return coursService.mettreAJourCours(id, cours);
     }
+     @PostMapping("/{coursId}/supports")
+    public SupportPedagogique ajouterSupport(@PathVariable Long coursId, @RequestBody SupportPedagogique support) {
+        return coursService.ajouterSupport(coursId, support);
+    }
